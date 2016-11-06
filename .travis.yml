@@ -7,6 +7,6 @@ install:
 - sudo pip install couchapp
 - couchapp push . http://localhost:5984/cassandre
 ##- gem install capybara-webkit rspec
-script: xvfb-run bundle exec rspec spec/features/*.rb 
+## script: xvfb-run bundle exec rspec spec/features/*.rb 
 ## xvfb-run rspec spec/features/*
 
