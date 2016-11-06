@@ -8,3 +8,4 @@ install:
 - couchapp push . http://localhost:5984/cassandre
 - gem install capybara-webkit rspec
 script: xvfb-run rspec spec/features/*
+
