@@ -1,14 +1,12 @@
 services: couchdb
-language: ruby
-rvm: 2.2
-install:
+language: bash
+before_script:
 - curl -X PUT -d '"false"' localhost:5984/_config/httpd/secure_rewrites
 - curl -X PUT localhost:5984/cassandre
 - sudo pip install couchapp
 - couchapp push . http://localhost:5984/cassandre
 - curl http://localhost:5984/cassandre
-- gem install capybara-webkit rspec
-script: 
+script: curl http://localhost:5984/cassandre
 ## xvfb-run bundle exec rspec spec/features/*.rb 
 ## xvfb-run rspec spec/features/*
 
