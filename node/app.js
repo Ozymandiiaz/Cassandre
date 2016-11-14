@@ -4,7 +4,7 @@ var app = require('express')(),
   http = require('http'),
   async = require('async');
 
-var frontend = 80,
+var frontend = 8080,
   backend_host = '127.0.0.1',
   backend_port = 5984,
   backend_path = '/cassandre/_design/cassandre/';
